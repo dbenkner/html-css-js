@@ -1,0 +1,104 @@
+body {
+    margin:0;
+}
+h1 {
+    font-family:  'Veranda', 'Tahoma';
+    text-align: center;
+}
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin-left:20%;
+    margin-right: 20%;
+}
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+li {
+    font-family:  Georgia, 'Times New Roman', Times, serif
+}
+footer {
+    background-color: rgba(169, 169, 169, 0.219);
+    width: 100%;
+    text-align: center;
+    color:white;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+}
+.container {
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(169, 169, 169, 0.219);
+    color:white;
+    width:70%;
+    gap: 0px;
+    min-height: 100vh;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0%;
+    padding:0%;
+    gap: 0px;
+}
+.content {
+    padding:0px;
+    margin: 0px;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    text-align: center;
+}
+.contact-info p {
+    padding: auto;
+    margin:auto;
+}
+.contact-info a:link {
+    color:white;
+    text-decoration: none;
+}
+.contact-info a:visited{
+    color:white;
+    text-decoration: none;
+}
+.contact-info a:hover{
+    color:darkblue;
+    text-decoration: none;
+}
+.contact-info a:active{
+    color:darkgray;
+    text-decoration: none;
+}
+.skills {
+    padding: auto;
+    margin: auto;
+    text-align: center;
+}
+p.loc {
+    padding:0%;
+    margin-left: 1%;
+    margin-top: .25em;
+}
+.contentHeading {
+    margin-left: 1%;
+    margin-top: .25em;
+    margin-bottom: .25em;
+}
+h2 {
+    padding: 0px;
+    margin: 5px;
+}

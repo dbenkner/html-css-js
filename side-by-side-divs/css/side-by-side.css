@@ -1,0 +1,16 @@
+body {
+    margin:0;
+}
+.sbs {
+    border: 1px solid red;
+    display: inline-block;
+    font-size: 20px;
+    width: 48%;
+    margin-left: auto;
+    vertical-align: top;
+    margin-left: 1%;
+    min-height: 200px;
+}
+.right-side {
+    text-align: right;
+}
