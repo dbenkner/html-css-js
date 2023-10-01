@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color:white;
+    background-color: black;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-radius: 5px;
+    padding:20px;
+    background-color: black;
+}
+button {
+    color:white;
+    background-color: black;
+    border-color: white;
+    padding:10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+}
