@@ -1,11 +1,9 @@
 let wins = 0;
 let losses = 0;
-let mess = document.getElementById("results");
 
 const play = () => {
     let mess = document.getElementById("results");
-
-    let point;
+    let winsLoses = document.getElementById("winsLoses");
     let gameOver = false;
     let results = [];
     let wlmess;
@@ -49,7 +47,8 @@ const play = () => {
         }
         round ++;
     }
-    mess.innerText = `${results} ${wlmess} ${wins} Wins ${losses} Loses`;
+    mess.innerText = `Die Roll: ${results} ${wlmess}`;
+    winsLoses.innerText = `Wins: ${wins} Loses: ${losses}`;
 }
 
 
