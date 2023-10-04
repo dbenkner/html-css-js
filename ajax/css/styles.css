@@ -1,0 +1,23 @@
+.tcontainer {
+    margin:auto;
+}
+body {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+input, select {
+    border-radius: 9px;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.get-vendor {
+    width: 500px;
+}

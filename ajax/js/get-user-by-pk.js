@@ -1,13 +1,35 @@
+$(() => {
+    console.log("Ready");
+    let data = document.URL.split("?")[1];
+    let id =  +data.split("=")[1];
+    getUserByPK(id);
+    $("#remove").on("click", () => {
+        remove();
+    });
+  });
+
+
+let user = null;
 const getUserByPK = (id) => {
+    $.getJSON(`http://localhost:5555/api/users/${id}`)
+        .done((res) => {
+            console.log(res);
+            display(res);
+            user = res;
+        })
+        .fail((err) => {
+            console.log(err);
+        })
+}
+const remove = () => {
     let http = new XMLHttpRequest();
-         http.responseType = "json";
-         http.open("GET", `http://localhost:5555/api/users/${id}`, true);
-         
-         http.onload = () => {
-            console.log(http.response);
-            display(http.response);
-        }
-        http.send();
+    http.responseType = "json";
+    http.open("DELETE", `http://localhost:5555/api/users/${user.id}`, true);
+    http.onload = () => {
+       console.log(http.response);
+   }
+   http.send();
+   document.location = 'get-all-users.html'
 }
 const loaded = () => {
     let data = document.URL.split("?")[1];

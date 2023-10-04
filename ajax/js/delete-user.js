@@ -15,7 +15,7 @@ const deleteUser = (id) => {
     console.log("hello");
     http.open("DELETE", `http://localhost:5555/api/users/${id}`, true);
          http.onload = () => {
-            console.log(http.status);
+            console.log(http.response);
         }
         http.send();
         console.log(http.status);
@@ -39,7 +39,7 @@ const getDataFromHtml = () => {
     console.debug(user);
     return user;
 }
-const loaded = () => {
+const loaded2 = () => {
     let data = document.URL.split("?")[1];
     let id =  +data.split("=")[1];
     getUser(id);

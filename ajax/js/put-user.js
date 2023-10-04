@@ -1,3 +1,4 @@
+
 const getUser = (id) => {
     let http = new XMLHttpRequest();
          http.responseType = "json";
@@ -10,18 +11,20 @@ const getUser = (id) => {
         http.send();
 }
 const putUser = (user) => {
-    let http = new XMLHttpRequest();
-         http.responseType = "json";
-         http.open("PUT", `http://localhost:5555/api/users/${user.id}`, true);
-         http.setRequestHeader('Content-type', 'application/json');
-         let data = JSON.stringify(user);
-         http.data = data;
-         console.log(http.data);
-         http.onload = () => {
-            console.log(http.response);
-        }
-        http.send(data);
+    $.ajax( {
+        method: "PUT",
+        url: `http://localhost:5555/api/users/${user.id}`,
+        data: JSON.stringify(user),
+        contentType: "application/json"
+    })
+    .done((res) => {
+        console.log(res);
         document.location = "get-all-users.html";
+    })
+    .fail((err) => {
+        console.error(err);
+    })
+    ;
 }
 const save = () => {
     let user = getDataFromHtml();

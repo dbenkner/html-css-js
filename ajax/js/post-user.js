@@ -1,16 +1,21 @@
+$(() => {
+
+});
 const postUser = (user) => {
-    let http = new XMLHttpRequest();
-         http.responseType = "json";
-         http.open("POST", `http://localhost:5555/api/users`, true);
-         http.setRequestHeader('Content-type', 'application/json');
-         let data = JSON.stringify(user);
-         http.data = data;
-         console.log(http.data);
-         http.onload = () => {
-            console.log(http.response);
-            display(http.response);
-        }
-        http.send(data);
+    $.ajax({
+        method: "POST",
+        url: "http://localhost:5555/api/users",
+        data: JSON.stringify(user),
+        contentType: "application/json"
+    })
+    .done((res) => {
+        console.log(res);
+        document.location = "get-all-users.html";
+    })
+    .fail((err) => {
+        console.error(err);
+    })
+    ;
 }
 const save = () => {
     let user = getDataFromHtml();
@@ -31,7 +36,7 @@ const getDataFromHtml = () => {
     return user;
 }
 const loaded = () => {
-    let user = getDataFromHtml();
+
 }
 const display = (user) => {
     document.getElementById("pid").value = user.id;

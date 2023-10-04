@@ -6,17 +6,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet">
-    <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="js/get-user-by-pk.js"></script>
+    <script src="js/get-vendors.js"></script>
+    <title>Vendors</title>
 </head>
-<body onload="loaded()">
-    <div class="tcontainer">
-    <table id="tData" class="table table-striped table-sm table-dark">
+<body>
+    <a class="link-offset-2 link-underline link-underline-opacity-0" href="post-vendor.html">Add Vendor</a>
+    <table class="table table-striped table-sm table-dark">
+        <thead>
+            <th>Id</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
     </table>
-    </div>
-    <button id="remove" onclick="remove()">
-        Delete
-    </button>
 </body>
 </html>
