@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/allcustomers.js"></script>
+</head>
+<body onload="getAllCustomers()">
+    <div class="wrapper">
+        <div class="headerContainer"><h1>Customer List</h1></div>
+        <div class="tableContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Code
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Sales
+                        </th>
+                        <th>
+                            Active
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
