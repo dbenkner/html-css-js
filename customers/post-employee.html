@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/postemployee.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="headerContainer">Add New Employee</div>
+    <div class="tableContainer">
+        <table id="addEmpTable">
+            <tr>
+                <td>ID</td>
+                <td><input value="0" readonly id="eId"></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input id="eEmail"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="ePassword"></td>
+            </tr>
+            <tr>
+                <td>Active</td>
+                <td><input type="checkbox" id="eActive"></td>
+            </tr>
+        </table>
+        <br>
+        <div class="buttonContainer" onClick="postEmployee()"><button>Add Employee</button></div>
+    </div>
+</body>
+</html>
